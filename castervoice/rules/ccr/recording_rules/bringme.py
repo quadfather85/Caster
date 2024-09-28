@@ -5,11 +5,7 @@ import time
 from subprocess import Popen
 import re
 
-import six
-if six.PY2:
-    from castervoice.lib.util.pathlib import Path
-else:
-    from pathlib import Path  # pylint: disable=import-error
+from pathlib import Path  # pylint: disable=import-error
 
 from dragonfly import Function, Choice, Dictation, ContextAction
 from castervoice.lib.context import AppContext
@@ -202,7 +198,7 @@ class BringRule(BaseSelfModifyingRule):
     _bm_defaults = {
         "website": {
             # Documentation
-            "caster documentation": "https://caster.readthedocs.io/en/latest/",
+            "caster documentation": "https://dictation-toolbox.github.io/Caster",
             "dragonfly documentation": "https://dragonfly2.readthedocs.io/en/latest/",
 
             # Caster Support
